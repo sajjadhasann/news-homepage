@@ -101,7 +101,7 @@ nav{
 .mobile-main-menu li:not(:last-child){
     margin-bottom: 30px;
 }
-nav ul li:hover,:active{
+nav ul li:hover, nav ul li:active{
     color: var(--Soft-red);
 }
 .mobile-main-menu-bg:has(.mobile-menu-btn:checked){
