@@ -2,59 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | News homepage</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | News homepage</title>
-
 </head>
+
 <body>
-  <nav>
+  <header>
     <span class="website-logo">
-      <img src="./assets/images/logo.svg" alt="website logo">
+      <img src="./assets/images/logo.svg" alt="website">
     </span>
-    
-    <ul class="desktop-main-menu">
-      <li class="menu-item"><a href="./">Home</a></li>
-      <li class="menu-item"><a href="./">New</a></li>
-      <li class="menu-item"><a href="./">Popular</a></li>
-      <li class="menu-item"><a href="./">Trending</a></li>
-      <li class="menu-item"><a href="./">Categories</a></li>
-    </ul>
-
-    <label for="mobileMenuBtn">
-      <img src=".//assets/images/icon-menu.svg" alt="">
-    </label>
-
-    <div class="mobile-main-menu-bg">
-      <input type="checkbox" class="mobile-menu-btn" id="mobileMenuBtn">
-      
-      <div>
-        <label for="mobileMenuBtn">
-          <img src=".//assets/images/icon-menu-close.svg" alt="">
-        </label>
-
-        <ul class="mobile-main-menu">
-          <li class="menu-item"><a href="./">Home</a></li>
-          <li class="menu-item"><a href="./new.html">New</a></li>
-          <li class="menu-item"><a href="./popular.html">Popular</a></li>
-          <li class="menu-item"><a href="./trending.html">Trending</a></li>
-          <li class="menu-item"><a href="./categories.html">Categories</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> 
+    <nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Menu">
+        <span class="visually-hidden">Menu</span>
+        <img class="menuIcon" src="./assets/images/icon-menu.svg" aria-hidden="true">
+        <img class="closeMenuIcon" src="./assets/images/icon-menu-close.svg" aria-hidden="true">
+      </button>
+      <ul class="primary-navigation" id="primary-navigation" data-state="closed">
+        <li class="menu-item"><a href="./">Home</a></li>
+        <li class="menu-item"><a href="./">New</a></li>
+        <li class="menu-item"><a href="./">Popular</a></li>
+        <li class="menu-item"><a href="./">Trending</a></li>
+        <li class="menu-item"><a href="./">Categories</a></li>
+      </ul>
+    </nav> 
+  </header>
 
   <main>
-    <section class="landing">
-      <img screen-type="desktop" src="./assets/images/image-web-3-desktop.jpg" alt="">
-      <img screen-type="mobile" src="./assets/images/image-web-3-mobile.jpg" alt="">
+    <article class="landing">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./assets/images/image-web-3-desktop.jpg">
+        <img src="./assets/images/image-web-3-mobile.jpg" alt="">
+      </picture>
       <div class="landing-content">
-        <h1>The Bright Future of Web 3.0?</h1>
+        <h2 class="landing-title">The Bright Future of Web 3.0?</h2>
         <div class="description">
           <p>We dive into the next evolution of the web that claims
             to put the power of the platforms back into the hands of the
@@ -62,61 +47,64 @@
           <a href="#" class="btn-link">Read more</a>
         </div>
       </div>
-    </section>
+    </article>
     
-    <section class="new-sec">
+    <ul class="new-sec">
       <h2 class="new-title">New</h2>
-      <div class="new-item">
+      <li class="new-item">
         <h3><a href="">Hydrogen VS Electric Cars</a></h3>
         <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-      </div>
-      <div class="new-item">
+      </li>
+      <li class="new-item">
         <h3><a href="">The Downsides of AI Artistry</a></h3>
         <p>What are the possible adverse effects of on-demand AI image generation?</p>
-      </div>
-      <div class="new-item">
+      </li>
+      <li class="new-item">
         <h3><a href="">Is VC Funding Drying Up?</a></h3>
         <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-      </div>
-    </section>
+      </li>
+    </ul>
   </main>
 
-  <section class="news-sec">
-    <article class="card">
-      <div class="card-img">
-        <img src="./assets/images/image-retro-pcs.jpg" alt="">
-      </div>
-      <div class="card-content">
-        <span>01</span>
-        <h3><a href="">Reviving Retro PCs</a></h3>
-        <p>What happens when old PCs are given modern upgrades?</p>
-      </div>
-    </article>
-    <article class="card">
-      <div class="card-img">
-        <img src="./assets/images/image-top-laptops.jpg" alt="">
-      </div>
-      <div class="card-content">
-        <span>02</span>
-        <h3><a href="">Top 10 Laptops of 2022</a></h3>
-        <p>Our best picks for various needs and budgets.</p>
-      </div>
-    </article>
-    <article class="card">
-      <div class="card-img">
-        <img src="./assets/images/image-gaming-growth.jpg" alt="">
-      </div>
-      <div class="card-content">
-        <span>03</span>
-        <h3><a href="">The Growth of Gaming</a></h3>
-        <p>How the pandemic has sparked fresh opportunities.</p>
-      </div>
-    </article>
-  </section>
+    <ol class="news-sec">
+      <h2 class="visually-hidden">News Section</h2>
+      <li class="card">
+        <div class="card-img">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="">
+        </div>
+        <div class="card-content">
+          <span>01</span>
+          <h3><a href="">Reviving Retro PCs</a></h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-img">
+          <img src="./assets/images/image-top-laptops.jpg" alt="">
+        </div>
+        <div class="card-content">
+          <span>02</span>
+          <h3><a href="">Top 10 Laptops of 2022</a></h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-img">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="">
+        </div>
+        <div class="card-content">
+          <span>03</span>
+          <h3><a href="">The Growth of Gaming</a></h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </li>
+    </ol>
 
   <p class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://linktr.ee/sajjad_hasan" target="_blank">Sajjad Hasan</a>.
   </p>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
